@@ -1,4 +1,14 @@
-@import "fonts-api/fonts";
+// fonts
+@font-face {
+    font-family: "iran-sans";
+    src: url("../../content/fonts/Iranian-Sans.ttf");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+$font-iranSans: "iran-sans";
+$font-english: 'Roboto',
+sans-serif;
+// general
 html {
     font-size: 16px;
 }
