@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
+@font-face {
+  font-family: "iran-sans";
+  src: url("../../../content/fonts/Iranian-Sans.ttf");
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "iran-sans";
+}
+
+:root {
+  --content-width: 100%;
+  --sidebar-toggler-rotate: 0deg;
+}
+
+.font-eng {
+  font-family: "Roboto", sans-serif;
+}
+
+.notif-count {
+  font-size: .5rem;
+}
+
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+.nav-link.show {
+  color: #000 !important;
+}
+
+.left-navbar .badge {
+  position: relative;
+  right: 8px;
+}
+
+#main-sidebar {
+  width: 270px;
+  height: 100vh;
+  top: 80px;
+  position: fixed;
+}
+
+@media screen and (max-width: 768px) {
+  #main-sidebar {
+    top: 55px;
+  }
+}
+
+.sidebar-notif-count {
+  position: relative;
+  bottom: 12px;
+  right: 3px;
+}
+
+.sidebar-notif-title {
+  font-size: .8rem;
+}
+
+.content-container {
+  -webkit-transition: width .2s;
+  transition: width .2s;
+  margin-top: 80px;
+  width: var(--content-width);
+}
+
+@media screen and (max-width: 768px) {
+  .content-container {
+    margin-top: 40px;
+  }
+}
+
+#navbar-open-sidebar {
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+  -webkit-transform: rotate(var(--sidebar-toggler-rotate));
+          transform: rotate(var(--sidebar-toggler-rotate));
+}
+
+.menu-arrow-icon {
+  font-size: .9rem;
+  margin-bottom: 5px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+.menu-items .item.collapsed .menu-arrow-icon {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.up-cards-icon {
+  font-size: 1.2rem;
+}
+
+.center-card {
+  padding: 0px 10px;
+}
+
+.center-card .center-card-footer-title {
+  font-size: 1rem;
+  opacity: .7;
+  font-weight: bold;
+}
+
+.down-card {
+  padding: 0px 10px;
+}
+
+.down-card .down-card-table {
+  white-space: nowrap;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,103 @@
+@import "fonts-api/fonts";
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: $font-iranSans;
+}
+
+:root {
+    --content-width: 100%;
+    --sidebar-toggler-rotate: 0deg;
+}
+
+.font-eng {
+    font-family: $font-english;
+}
+
+.notif-count {
+    font-size: .5rem;
+}
+
+.cursor-pointer {
+    cursor: pointer !important;
+}
+
+.nav-link.show {
+    color: #000 !important;
+}
+
+.left-navbar .badge {
+    position: relative;
+    right: 8px;
+}
+
+#main-sidebar {
+    width: 270px;
+    height: 100vh;
+    top: 80px;
+    position: fixed;
+    @media screen and (max-width: 768px) {
+        top: 55px;
+    }
+}
+
+.sidebar-notif-count {
+    position: relative;
+    bottom: 12px;
+    right: 3px;
+}
+
+.sidebar-notif-title {
+    font-size: .8rem;
+}
+
+.content-container {
+    transition: width .2s;
+    margin-top: 80px;
+    width: var(--content-width);
+    @media screen and (max-width: 768px) {
+        margin-top: 40px;
+    }
+}
+
+#navbar-open-sidebar {
+    transition: transform .5s;
+    transform: rotate(var(--sidebar-toggler-rotate));
+}
+
+.menu-arrow-icon {
+    font-size: .9rem;
+    margin-bottom: 5px;
+    transform: rotate(-90deg);
+    transition: transform .5s;
+}
+
+.menu-items {
+    .item.collapsed {
+        .menu-arrow-icon {
+            transform: rotate(0deg);
+        }
+    }
+}
+
+.up-cards-icon {
+    font-size: 1.2rem;
+}
+
+.center-card {
+    padding: 0px 10px;
+    .center-card-footer-title {
+        font-size: 1rem;
+        opacity: .7;
+        font-weight: bold;
+    }
+}
+
+.down-card {
+    padding: 0px 10px;
+    .down-card-table {
+        white-space: nowrap;
+    }
+}
