@@ -20,7 +20,7 @@
 
 <body dir="rtl">
     <!----------------- Navbar ----------------->
-    <nav class="navbar navbar-light bg-white navbar-expand-md fixed-top border-bottom">
+    <nav class="navbar navbar-expand-md fixed-top border-bottom border-secondary" id="main-navbar-colors">
         <div class="container-fluid">
             <p class="mb-0 navbar-brand d-flex justify-content-start">
                 <span>پنل مدیریت محتوا</span>
@@ -55,17 +55,17 @@
                         <img src="content/images/user.png" width="40" alt="">
                         <span class="font-eng">alireza</span>
                     </div>
-                    <ul class="dropdown-menu dropdown-menu-start">
-                        <li><span class="dropdown-header text-center bg-light">حساب کاربری</span></li>
+                    <ul class="dropdown-menu dropdown-menu-start dropdown-menu-dark">
+                        <li><span class="dropdown-header text-center bg-secondary text-light">حساب کاربری</span></li>
                         <li><a href="#" class="dropdown-item">پروفایل</a></li>
-                        <li><a href="#" class="dropdown-item list-group-item-danger text-center">خروج</a></li>
+                        <li><a href="#" class="dropdown-item text-center text-danger">خروج</a></li>
                     </ul>
                 </li>
                 <li class="nav-item ms-4 dropdown">
                     <li class="far fa-comment fs-5 nav-link" data-bs-toggle="dropdown"></li>
                     <span class="badge bg-primary rounded-pill mb-4 notif-count">12</span>
-                    <ul class="dropdown-menu dropdown-menu-start mb-5 me-3">
-                        <li><span class="dropdown-header text-center bg-light">شما 12 پیام جدید دارید</span></li>
+                    <ul class="dropdown-menu dropdown-menu-start dropdown-menu-dark mb-5 me-3">
+                        <li><span class="dropdown-header text-center bg-secondary text-light">شما 12 پیام جدید دارید</span></li>
                         <li><a href="#" class="dropdown-item">مشاهده</a></li>
                         <li><a href="#" class="dropdown-item text-danger text-center">حذف همه</a></li>
                     </ul>
@@ -73,8 +73,8 @@
                 <li class="nav-item dropdown">
                     <li class="fa fa-list-ul fs-5 nav-link" data-bs-toggle="dropdown"></li>
                     <span class="badge bg-warning rounded-pill mb-4 notif-count">5</span>
-                    <ul class="dropdown-menu dropdown-menu-start mb-5 me-4">
-                        <li><span class="dropdown-header text-center bg-light">شما 5 سفارش جدید دارید</span></li>
+                    <ul class="dropdown-menu dropdown-menu-start dropdown-menu-dark mb-5 me-4">
+                        <li><span class="dropdown-header text-center bg-secondary text-light">شما 5 سفارش جدید دارید</span></li>
                         <li><a href="#" class="dropdown-item">مشاهده</a></li>
                         <li>
                             <button href="#" class="dropdown-item text-danger text-center">حذف همه</button>
@@ -84,8 +84,8 @@
                 <li class="nav-item dropdown">
                     <li class="far fa-bell fs-5 nav-link" data-bs-toggle="dropdown"></li>
                     <span class="badge bg-danger rounded-pill mb-4 notif-count">3</span>
-                    <ul class="dropdown-menu dropdown-menu-start mb-5 me-5">
-                        <li><span class="dropdown-header text-center bg-light">شما 3 اعلان جدید دارید</span></li>
+                    <ul class="dropdown-menu dropdown-menu-start dropdown-menu-dark mb-5 me-5">
+                        <li><span class="dropdown-header text-center bg-secondary text-light">شما 3 اعلان جدید دارید</span></li>
                         <li><a href="#" class="dropdown-item">کاربر جدیدی اضافه شد</a></li>
                         <li><a href="#" class="dropdown-item">کاربر #1235 حذف شد</a></li>
                         <li><a href="#" class="dropdown-item text-danger text-center">حذف همه</a></li>
@@ -99,7 +99,7 @@
     <!----------------- Content ----------------->
     <div class="w-100">
         <!-- sidebar -->
-        <div class="offcanvas offcanvas-start bg-dark show" id="main-sidebar" data-bs-scroll="true" data-bs-backdrop="false">
+        <div class="offcanvas offcanvas-start bg-dark show border-0" id="main-sidebar" data-bs-scroll="true" data-bs-backdrop="false">
             <div class="sidebar-content p-4 pt-2 text-light">
                 <!-- header -->
                 <header class="d-flex justify-content-between align-items-center">
@@ -201,10 +201,16 @@
                     </div>
                 </section>
             </div>
+            <div class="sidebar-footer p-1 w-100">
+                <div class="change-theme-toggler d-flex justify-content-center align-items-center cursor-pointer">
+                    <li class="far fa-moon theme-icon" id="theme-dark-icon"></li>
+                    <img src="content/images/sun.svg" class="theme-icon show" width="23" alt="sun_icon" id="theme-light-icon">
+                </div>
+            </div>
         </div>
 
         <!-- content -->
-        <div class="content-container bg-light float-end">
+        <div class="content-container float-end" id="main-content-colors">
             <div class="container-fluid pt-4">
                 <!-- up cards -->
                 <div class="up-cards row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
@@ -271,7 +277,7 @@
             </div>
             <!-- center card -->
             <div class="center-card w-100">
-                <div class="card w-100 bg-white shadow mt-3">
+                <div class="card w-100 shadow mt-3" id="center-card-colors">
                     <div class="card-body">
                         <header class="d-flex justify-content-between align-items-center">
                             <p class="mb-0 h5">آمار بازدید سایت</p>
@@ -371,7 +377,7 @@
             </div>
             <!-- down card -->
             <div class="down-card w-100 mb-3">
-                <div class="card bg-white shadow mt-3">
+                <div class="card shadow mt-3" id="down-card-colors">
                     <div class="card-body">
                         <header class="d-flex align-items-center">
                             <p class="mb-0 h5">آخرین گزارشات فروش</p>
@@ -381,7 +387,7 @@
                             </span>
                         </header>
                         <div class="table-responsive">
-                            <table class="table table-bordered mt-3 text-center down-card-table">
+                            <table class="table table-bordered mt-3 text-center down-card-table" id="down-table-colors">
                                 <thead>
                                     <th spellcheck="col">نام محصول</th>
                                     <th spellcheck="col">ایمیل کاربر</th>
@@ -474,6 +480,7 @@
 <script src="engine/libs/bootstrap/js/bootstrap.min.js"></script>
 <script src="engine/libs/chartJs/chartjs.min.js"></script>
 <script src="engine/scripts/main.js"></script>
+<script src="engine/scripts/theme.js"></script>
 <script src="engine/scripts/chartConfig.js"></script>
 
 </html>

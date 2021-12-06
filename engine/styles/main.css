@@ -15,6 +15,11 @@ body {
 :root {
   --content-width: 100%;
   --sidebar-toggler-rotate: 0deg;
+  --main-background-color: #f8f9fa;
+  --main-cards-background: #ffffff;
+  --main-cards-text-color: #161616;
+  --color-scheme: light;
+  color-scheme: var(--color-scheme);
 }
 
 .font-eng {
@@ -30,7 +35,7 @@ body {
 }
 
 .nav-link.show {
-  color: #000 !important;
+  color: var(--main-cards-text-color) !important;
 }
 
 .left-navbar .badge {
@@ -59,6 +64,47 @@ body {
 
 .sidebar-notif-title {
   font-size: .8rem;
+}
+
+.sidebar-footer {
+  position: absolute;
+  bottom: 12%;
+}
+
+.sidebar-footer .change-theme-toggler {
+  right: 5px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--bs-dark);
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 10px -5px rgba(255, 255, 255, 0.2), 0px 0px 10px 0px rgba(255, 255, 255, 0.2) inset;
+          box-shadow: 0px 0px 10px -5px rgba(255, 255, 255, 0.2), 0px 0px 10px 0px rgba(255, 255, 255, 0.2) inset;
+  position: relative;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.2rem;
+  overflow: hidden;
+  -webkit-transition: -webkit-box-shadow 0.2s;
+  transition: -webkit-box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+}
+
+.sidebar-footer .change-theme-toggler:active {
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.2), 0px 0px 10px 0px rgba(255, 255, 255, 0.2) inset;
+          box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.2), 0px 0px 10px 0px rgba(255, 255, 255, 0.2) inset;
+}
+
+.sidebar-footer .change-theme-toggler .theme-icon {
+  position: absolute;
+  left: 150%;
+  -webkit-transition: left .4s;
+  transition: left .4s;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.theme-icon.show {
+  left: 50% !important;
 }
 
 .content-container {
@@ -119,5 +165,38 @@ body {
 
 .down-card .down-card-table {
   white-space: nowrap;
+}
+
+#main-navbar-colors {
+  background-color: var(--main-background-color);
+  color: var(--main-cards-text-color);
+  -webkit-transition: background-color .4s, color .4s;
+  transition: background-color .4s, color .4s;
+}
+
+#main-content-colors {
+  background-color: var(--main-background-color);
+  -webkit-transition: background-color .4s, color .4s;
+  transition: background-color .4s, color .4s;
+}
+
+#center-card-colors {
+  background-color: var(--main-cards-background);
+  color: var(--main-cards-text-color);
+  -webkit-transition: background-color .4s, color .4s;
+  transition: background-color .4s, color .4s;
+}
+
+#down-card-colors {
+  background-color: var(--main-cards-background);
+  color: var(--main-cards-text-color);
+  -webkit-transition: background-color .4s, color .4s;
+  transition: background-color .4s, color .4s;
+}
+
+#down-table-colors {
+  color: var(--main-cards-text-color);
+  -webkit-transition: color .4s;
+  transition: color .4s;
 }
 /*# sourceMappingURL=main.css.map */
